@@ -20,7 +20,7 @@ public:
         return 0xD503201F;
     }
     [[nodiscard]] auto get_asm() const {
-        return std::span{reinterpret_cast<const uint8_t *>(asm_buffer_stream.data()), asm_buffer_stream.size()};
+        return std::span{reinterpret_cast<const uint8_t *>(asm_buffer_stream.data()), asm_buffer_stream.size() * 4};
     }
 };
 }
