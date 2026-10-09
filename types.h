@@ -17,9 +17,9 @@ protected:
 };
 
 template<typename T>
-class FixedBufferSizeEmitter {
+class FixedBufferSize {
 public:
-    auto emitter(const T &value) {
+    auto write_inst(const T &value) {
         return asm_buffer_stream.emplace_back(value);
     }
 protected:
